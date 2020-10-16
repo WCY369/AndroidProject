@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.calculator">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/a57828bf893d734d2268f393533d7a0c"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/a57828bf893d734d2268f393533d7a0c"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".CalculatorActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
