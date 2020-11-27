@@ -1,54 +1,30 @@
 package com.android.MyWeather.activity;
 
-import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 //import android.support.annotation.NonNull;
-import androidx.annotation.NonNull;
 //import android.support.v4.app.ActivityCompat;
-import androidx.core.app.ActivityCompat;
 //import android.support.v7.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatActivity;
-import android.util.Log;
+
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.amap.api.location.AMapLocation;
-import com.amap.api.location.AMapLocationClient;
-import com.amap.api.location.AMapLocationClientOption;
-import com.amap.api.location.AMapLocationListener;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 import com.android.MyWeather.R;
-import com.android.MyWeather.bean.Casts;
-import com.android.MyWeather.bean.Weather;
-import com.android.MyWeather.util.WeatherUtil;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-
-public class ShowWeather extends AppCompatActivity {
+public class ShowCityItems extends AppCompatActivity {
 
     //控件
     private ListView listView;
@@ -75,7 +51,7 @@ public class ShowWeather extends AppCompatActivity {
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                ShowWeather.this, android.R.layout.simple_list_item_1,cityitems
+                ShowCityItems.this, android.R.layout.simple_list_item_1,cityitems
         );
         listView.setAdapter(adapter);
 
@@ -86,7 +62,7 @@ public class ShowWeather extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("city",cityitems.get(position));
                 editor.commit();
-                Intent intent = new Intent(ShowWeather.this, SearchWeather.class);
+                Intent intent = new Intent(ShowCityItems.this, SearchWeather.class);
                 startActivity(intent);
                 finish();
             }
@@ -108,7 +84,7 @@ public class ShowWeather extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("city","");
                 editor.commit();
-                Intent intent = new Intent(ShowWeather.this, SearchWeather.class);
+                Intent intent = new Intent(ShowCityItems.this, SearchWeather.class);
                 startActivity(intent);
                 finish();
             }

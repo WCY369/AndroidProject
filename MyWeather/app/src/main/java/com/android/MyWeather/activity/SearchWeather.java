@@ -11,7 +11,6 @@ import android.os.Message;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -28,10 +27,8 @@ import com.android.MyWeather.bean.Weather;
 import com.android.MyWeather.util.WeatherUtil;
 import com.google.gson.reflect.TypeToken;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -151,7 +148,7 @@ public class SearchWeather extends AppCompatActivity {
         return_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SearchWeather.this,ShowWeather.class);
+                Intent intent = new Intent(SearchWeather.this, ShowCityItems.class);
                 startActivity(intent);
                 finish();
             }

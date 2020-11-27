@@ -34,7 +34,7 @@
         <TextView
             android:id="@+id/day"
             android:layout_width="320sp"
-            android:layout_height="3sp"
+            android:layout_height="30sp"
             android:layout_below="@+id/date"
             android:layout_centerHorizontal="true"
             android:gravity="center"
