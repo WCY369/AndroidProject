@@ -1,4 +1,4 @@
-package com.WCY.Music.adater;
+package com.WCY.Music.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

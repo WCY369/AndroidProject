@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 import com.WCY.Music.R;
 import com.WCY.Music.Service.MusicService;
 import com.WCY.Music.ServiceImpl.MusicServiceImpl;
-import com.WCY.Music.adater.SongAdapter;
+import com.WCY.Music.adapter.SongAdapter;
 import com.WCY.Music.dto.SongDto;
 import com.WCY.Music.VO.SongBean;
 

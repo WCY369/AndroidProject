@@ -17,7 +17,7 @@ import com.WCY.Music.MainActivity;
 import com.WCY.Music.R;
 import com.WCY.Music.Service.SongSheetService;
 import com.WCY.Music.ServiceImpl.SongSheetServiceImpl;
-import com.WCY.Music.adater.SongSheetAdapter;
+import com.WCY.Music.adapter.SongSheetAdapter;
 import com.WCY.Music.dto.SongDto;
 import com.WCY.Music.VO.SongBean;
 import com.WCY.Music.VO.SongSheetBean;
